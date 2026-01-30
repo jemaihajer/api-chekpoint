@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap');
+
+:root {
+  --bg: #050c1f;
+  --bg-card: rgba(8, 18, 46, 0.75);
+  --bg-card-solid: #111d3c;
+  --accent: #7df9ff;
+  --text: #f5f7ff;
+  --muted: #9aa4c2;
+  --border: rgba(125, 249, 255, 0.25);
+}
+
+.app-shell {
+  min-height: 100vh;
+  padding: 4rem clamp(1.5rem, 3vw, 4rem) 5rem;
+  color: var(--text);
+  font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #13264c, #050c1f 55%);
+}
+
+.hero {
+  max-width: 720px;
+  margin: 0 auto 3rem auto;
+  text-align: center;
+}
+
+.eyebrow {
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.8rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  margin-bottom: 1rem;
+}
+
+.lede {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.user-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.user-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem;
+  border-radius: 1.25rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), #4dd0e1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #041126;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.user-card__title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-bottom: 0.35rem;
+}
+
+.user-card__title h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.user-card__title span {
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+
+.user-card__contact {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.user-card__address {
+  margin: 0.6rem 0 0;
+  color: #d6dbff;
+  font-size: 0.95rem;
+}
+
+.status-card {
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: var(--bg-card-solid);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-weight: 500;
+}
+
+.status-error {
+  color: #ffb3c1;
+  border-color: rgba(255, 99, 132, 0.4);
+}
+
+@media (max-width: 600px) {
+  .user-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .avatar {
+    margin-bottom: 0.5rem;
+  }
+}
